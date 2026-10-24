@@ -18,12 +18,17 @@ fonts:
 
 # <span class="text-[#ed225d]">p5.js</span><span class="text-4xl">を</span>映像制作ソフト<span class="text-4xl">に<br>埋め込むと</span>いいとこ取り<span class="text-4xl">が<br>できるのでは？</span>
 
-<!-- Can we embed <span class="text-[#ed225d]">p5.js</span> into video editing software,   -->
-<!-- and get the best of both worlds? -->
-<!---->
+Can we embed <span class="text-[#ed225d]">p5.js</span> into video editing software,  
+and get the best of both worlds?
 </div>
 
-名無し。（@sevenc_nanashi / sevenc7c.com）
+名無し。（@sevenc_nanashi / sevenc7c.com）  
+English translation: <https://sevenc7c.com/pcd_tokyo_2026_vi5_aux2>
+
+<!--
+Can we embed p5.js into video editing software and get the best of both worlds?
+I'm Nanashi., also known as @sevenc_nanashi.
+-->
 
 ---
 
@@ -43,6 +48,12 @@ fonts:
 </v-clicks>
 
 <img src="./assets/general.apng" un-absolute un-right="0" un-h="60" un-top="1/2" un-translate-y="-1/2" un-pointer-events-none />
+
+<!--
+Let me introduce myself. I go by 「名無し。」 in Japanese and “Nanashi.” in English. Don't forget the punctuation at the end!
+I develop applications, including VOICEVOX, compose music as a Vocaloid producer, draw illustrations, and more.
+You can find me at https://sevenc7c.com.
+-->
 
 ---
 
@@ -72,6 +83,14 @@ VJ、ゲーム、展示品など...
 </p>
 </div>
 </div>
+
+<!--
+Why use p5.js or Processing?
+First, they let us add interactivity, for example in VJ performances, games, and installations.
+Second, they make it easy to animate large numbers of elements, such as particles and fractal-like visuals.
+Third, they let us turn data into visuals, such as audio visualizers.
+-->
+
 ---
 
 # 例：インタラクティブ性
@@ -80,12 +99,20 @@ VJ、ゲーム、展示品など...
 
 <p un-text="xs center" un-mt="0!">https://twitter.com/PCD_Tokyo/status/2112844060100858326</p>
 
+<!--
+Here is an example of interactivity.
+-->
+
 ---
 
 # 例：大量の要素を動かす
 
 <iframe src="https://haukun.github.io/p5js-baton-fireworks/viewer-fireworks/" un-w="auto" un-h="[calc(100%_-_3.5rem)]" un-mx-auto></iframe>
 <p un-text="xs center" un-mt="0!">p5.js 花火大会 / https://haukun.github.io/p5js-baton-fireworks/viewer-fireworks/</p>
+
+<!--
+Here is an example of animating a large number of elements: the p5.js Fireworks Festival.
+-->
 
 ---
 
@@ -98,6 +125,12 @@ VJ、ゲーム、展示品など...
 文字はp5.jsによる描画、背景はGLSLシェーダーによる描画
 
 </div>
+
+<!--
+Here is an example of creating visuals from data.
+This is 「過置換」, with music by d.j.ァネイロ and visuals by melonade.
+The text is rendered with p5.js, and the background is rendered with GLSL shaders.
+-->
 
 ---
 
@@ -112,6 +145,12 @@ VJ、ゲーム、展示品など...
 もしかしたら作り直すのを忘れてしまうかも + タイミングがずれるかも...
 
 </div>
+
+<!--
+Doing this manually is a lot of work.
+This is “.”, with music and visuals by xxxx.
+If the music changes, you need to recreate the images. You might forget to update them, or the timing might end up out of sync.
+-->
 
 ---
 
@@ -131,6 +170,14 @@ VJ、ゲーム、展示品など...
 
 </v-clicks>
 
+<!--
+Making an entire video in p5.js can be tough.
+The kinds of visuals I just showed are easy to create, but adding other elements gets cumbersome—for example, typography-based music videos or animated illustrations.
+You essentially end up reinventing video editing software, including its ecosystem.
+The browser also becomes a bottleneck, especially for heavy effects like pixel sorting and motion blur.
+It would be better to use existing video editing software, where you can edit visually and see the result as you work.
+-->
+
 ---
 
 <div un-grid un-items-center un-h-full un-text-center>
@@ -138,6 +185,10 @@ VJ、ゲーム、展示品など...
 # p5.jsのスケッチをを映像制作ソフトに<br>読み込みたい！
 
 </div>
+
+<!--
+I want to bring p5.js sketches into video editing software!
+-->
 
 ---
 
@@ -162,6 +213,15 @@ VJ、ゲーム、展示品など...
 
 </div>
 
+<!--
+There are already several ways to do this.
+Okazz has an article on turning p5.js sketches into videos by controlling a browser with Puppeteer.
+p5.capture, by tapioca24, exports the p5.js canvas as a video or a ZIP archive of an image sequence.
+I also made p5-frame-capturer, which uses the File System API to write an image sequence directly to a folder.
+But all of these approaches only let you import a sketch as rendered footage.
+For example, you can't pass parameters to the sketch from the video editor.
+-->
+
 ---
 
 <div un-grid un-items-center un-h-full un-text-center>
@@ -170,6 +230,10 @@ VJ、ゲーム、展示品など...
 
 </div>
 
+<!--
+I want to use p5.js as an object inside video editing software!
+-->
+
 ---
 
 <div un-grid un-items-center un-h-full un-text-center>
@@ -177,6 +241,10 @@ VJ、ゲーム、展示品など...
 # 作った！！（開発中）
 
 </div>
+
+<!--
+So I made it! It's still in development.
+-->
 
 ---
 
@@ -202,6 +270,14 @@ VJ、ゲーム、展示品など...
 
 </v-clicks>
 
+<!--
+This is vi5.aux2, a plugin for AviUtl2.
+It lets you load p5.js sketches as objects and pass parameters to them from the video editor.
+It's powered by Vite, so you can use TypeScript and existing plugins, such as @rollup/plugin-yaml.
+You can work with p5.js sketches just like any other object in the editor.
+The rest of the processing runs natively, so the browser only limits the sketch itself.
+-->
+
 ---
 
 # 動作デモ
@@ -209,6 +285,10 @@ VJ、ゲーム、展示品など...
 <div un-h="[calc(100%_-_3.5rem)]">
 <video src="./assets/vi5_demo.mp4" controls un-w="auto" un-h="full" un-z="20" un-mx-auto></video>
 </div>
+
+<!--
+Here's a demo of how it works.
+-->
 
 ---
 
@@ -219,6 +299,11 @@ VJ、ゲーム、展示品など...
 </div>
 
 <p un-text="xs center" un-mt="0!">ひまわりれしーば / 音楽・映像・イラスト：Nanashi. / ボーカル：春日部つむぎ（VOICEVOX）</p>
+
+<!--
+Here's an example of a work made with it.
+This is 「ひまわりれしーば」. I created the music, visuals, and illustrations as Nanashi., with vocals by Kasukabe Tsumugi from VOICEVOX.
+-->
 
 ---
 
@@ -240,6 +325,13 @@ sequenceDiagram
 
 </div>
 
+<!--
+Here's how vi5.aux2 works.
+AviUtl2 asks vi5.aux2 to render an object.
+vi5.aux2 then asks p5.js, running inside CEF, to render the sketch.
+p5.js returns the rendered result to vi5.aux2, which passes it back to AviUtl2.
+-->
+
 ---
 
 # 課題点
@@ -254,6 +346,13 @@ sequenceDiagram
   - 例えば色々と挙動が怪しい
 
 </v-clicks>
+
+<!--
+There are still some issues.
+At the moment, it only supports AviUtl2, although internally it's designed so that other video editors could be supported.
+It's slow! There is a fixed overhead of around 30 milliseconds, which makes 60 frames per second difficult.
+It's also unstable, with various behaviors that still don't seem quite right.
+-->
 
 ---
 
@@ -278,6 +377,13 @@ sequenceDiagram
 
 </v-clicks>
 
+<!--
+For future work, I'm planning to stop using p5.js!
+Instead, I want to use libprocessing, an implementation of Processing written in Rust.
+It would let me get textures directly, without going through CEF.
+It might also allow languages other than JavaScript—perhaps even Ruby or HSP.
+-->
+
 ---
 
 # まとめ
@@ -301,3 +407,12 @@ sequenceDiagram
 - この資料：<https://sevenc7c.com/pcd_tokyo_2026_vi5_aux2>
 
 </v-click>
+
+<!--
+To wrap up, p5.js is useful for creating visuals with code, and existing video editing software is useful for editing visually.
+Embedding p5.js into video editing software looks like a way to get the best of both worlds.
+I built vi5.aux2 as a prototype.
+There are still challenges, but libprocessing might help solve them.
+Thank you for listening!
+You can find vi5.aux2 and these slides at the links shown here.
+-->
