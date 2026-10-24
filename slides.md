@@ -40,6 +40,7 @@ I'm Nanashi., also known as @sevenc_nanashi.
   - 句点/ピリオドを忘れずに！
 - 何をやっているか：
   - アプリケーション開発（VOICEVOXなど）
+  - 競技プログラミング（AtCoder：1532）
   - 作曲（ボカロP）
   - お絵描き
   - など
@@ -51,7 +52,7 @@ I'm Nanashi., also known as @sevenc_nanashi.
 
 <!--
 Let me introduce myself. I go by 「名無し。」 in Japanese and “Nanashi.” in English. Don't forget the punctuation at the end!
-I develop applications, including VOICEVOX, compose music as a Vocaloid producer, draw illustrations, and more.
+I develop applications, including VOICEVOX, play competitive programming, compose music as a Vocaloid producer, draw illustrations, and more.
 You can find me at https://sevenc7c.com.
 -->
 
