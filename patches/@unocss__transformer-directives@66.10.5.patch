@@ -1,0 +1,13 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 8d8cf5eed37bb6b7bd432fcf664465a031b17968..8378d74c26b7ba12cac05c729113f4bf26bdbfc2 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -238,7 +238,7 @@ async function transformDirectives(code, uno, options, filename, originalCode, o
+ 			if (/^[\s\w\-.,#:[\]=*"'>~+^$|()\\]+$/.test(selector.trim())) return "";
+ 			return m;
+ 		});
+-		if (newCode !== oldCode) code.update(0, code.original.length, newCode);
++		if (newCode !== oldCode) code.overwrite(0, code.original.length, newCode);
+ 	}
+ }
+ //#endregion
