@@ -1,0 +1,39 @@
+:root {
+  font-size: 20px;
+  color: #444444;
+}
+#slideshow {
+  margin: 0;
+  background-color: color-mix(in srgb, transparent, #ddf0f7 85%);
+  background-image: radial-gradient(
+      in oklch 1200px 900px at 8% -10%,
+      color-mix(in srgb, transparent, #8acde4 45%),
+      transparent 65%
+    ),
+    radial-gradient(
+      in oklch 900px 700px at 110% 10%,
+      color-mix(in srgb, transparent, #acdbec 45%),
+      transparent 60%
+    ),
+    radial-gradient(
+      in oklch 800px 600px at 50% 120%,
+      color-mix(in srgb, transparent, #cde9f3 60%),
+      transparent 60%
+    ),
+    linear-gradient(
+      in oklch 135deg,
+      #fff,
+      color-mix(in srgb, transparent, #ddf0f7 70%) 45%,
+      #fff
+    );
+  background-attachment: fixed;
+  background-blend-mode: screen, screen, screen, normal;
+}
+
+h1 {
+  color: oklch(0.6908 0.1047 217.34);
+}
+
+.footnotes {
+  font-size: 16px;
+}
